@@ -15,8 +15,8 @@ import { Prisma, Address, Customer } from "@prisma/client";
 export class AddressServiceBase {
   constructor(protected readonly prisma: PrismaService) {}
 
-  async count<T extends Prisma.AddressFindManyArgs>(
-    args: Prisma.SelectSubset<T, Prisma.AddressFindManyArgs>
+  async count<T extends Prisma.AddressCountArgs>(
+    args: Prisma.SelectSubset<T, Prisma.AddressCountArgs>
   ): Promise<number> {
     return this.prisma.address.count(args);
   }
