@@ -15,8 +15,8 @@ import { Prisma, Product, Order } from "@prisma/client";
 export class ProductServiceBase {
   constructor(protected readonly prisma: PrismaService) {}
 
-  async count<T extends Prisma.ProductFindManyArgs>(
-    args: Prisma.SelectSubset<T, Prisma.ProductFindManyArgs>
+  async count<T extends Prisma.ProductCountArgs>(
+    args: Prisma.SelectSubset<T, Prisma.ProductCountArgs>
   ): Promise<number> {
     return this.prisma.product.count(args);
   }
