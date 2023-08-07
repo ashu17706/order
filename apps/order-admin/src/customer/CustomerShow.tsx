@@ -31,7 +31,7 @@ export const CustomerShow = (props: ShowProps): React.ReactElement => {
         <DateField source="updatedAt" label="Updated At" />
         <ReferenceManyField
           reference="Order"
-          target="CustomerId"
+          target="customerId"
           label="Orders"
         >
           <Datagrid rowClick="show">
